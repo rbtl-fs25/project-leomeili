@@ -1,0 +1,7 @@
+household,n,percentage,label
+Couple household,2,10,"Couple household
+10%"
+Family (parent),2,10,"Family (parent)
+10%"
+Shared apartment (WG),16,80,"Shared apartment (WG)
+80%"

@@ -1,0 +1,76 @@
+Timestamp,"Do you have electronic waste (e-waste) lying around at home? If yes, approximately how many items?",Have you ever disposed of e-waste?,Have you ever recycled e-waste?,How important is it to you personally that you recycle your electronic waste?,"From a broader, systemic point of view, how important do you believe e-waste recycling is for society?","How likely are you to recycle your next item of e-waste (e.g. phones, chargers, laptops)?",How old are you?,What is your gender?,What is your highest degree?,What kind of household do you live in?,Is your birthday an even or odd number (the day of the month)?,Were you able to open and read the article?,"For the next question, please indicate how strongly you agree with each of the following sentences stating reasons for recycling e-waste.
+
+The sentences go as follows:
+""We should recycle e-waste in order to 'add reason here'.""
+An example:
+""We should recycle e-waste in order to reduce dependence on CRM imports""
+
+The scale goes from 1 to 5, where 1 represents 'Strongly disagree' and 5 represents 'Strongly agree'. [Reduce CO2 emissions from mining/sourcing]","For the next question, please indicate how strongly you agree with each of the following sentences stating reasons for recycling e-waste.
+
+The sentences go as follows:
+""We should recycle e-waste in order to 'add reason here'.""
+An example:
+""We should recycle e-waste in order to reduce dependence on CRM imports""
+
+The scale goes from 1 to 5, where 1 represents 'Strongly disagree' and 5 represents 'Strongly agree'. [Recover critical raw materials (CRM)]","For the next question, please indicate how strongly you agree with each of the following sentences stating reasons for recycling e-waste.
+
+The sentences go as follows:
+""We should recycle e-waste in order to 'add reason here'.""
+An example:
+""We should recycle e-waste in order to reduce dependence on CRM imports""
+
+The scale goes from 1 to 5, where 1 represents 'Strongly disagree' and 5 represents 'Strongly agree'. [Reduce dependence on ethically controversial mining]","For the next question, please indicate how strongly you agree with each of the following sentences stating reasons for recycling e-waste.
+
+The sentences go as follows:
+""We should recycle e-waste in order to 'add reason here'.""
+An example:
+""We should recycle e-waste in order to reduce dependence on CRM imports""
+
+The scale goes from 1 to 5, where 1 represents 'Strongly disagree' and 5 represents 'Strongly agree'. [Avoid general pollution]","For the next question, please indicate how strongly you agree with each of the following sentences stating reasons for recycling e-waste.
+
+The sentences go as follows:
+""We should recycle e-waste in order to 'add reason here'.""
+An example:
+""We should recycle e-waste in order to reduce dependence on CRM imports""
+
+The scale goes from 1 to 5, where 1 represents 'Strongly disagree' and 5 represents 'Strongly agree'. [Support a circular economy/local supply chains]","For the next question, please indicate how strongly you agree with each of the following sentences stating reasons for recycling e-waste.
+
+The sentences go as follows:
+""We should recycle e-waste in order to 'add reason here'.""
+An example:
+""We should recycle e-waste in order to reduce dependence on CRM imports""
+
+The scale goes from 1 to 5, where 1 represents 'Strongly disagree' and 5 represents 'Strongly agree'. [Reduce dependence on CRM imports/avoid CRM scarcity]","For the next question, please indicate how important you consider the recycling of each of the following materials to be.
+
+The scale goes from 1 to 5, where 1 represents 'Not important at all' and 5 represents 'Extremely important'. [PET]","For the next question, please indicate how important you consider the recycling of each of the following materials to be.
+
+The scale goes from 1 to 5, where 1 represents 'Not important at all' and 5 represents 'Extremely important'. [Glass]","For the next question, please indicate how important you consider the recycling of each of the following materials to be.
+
+The scale goes from 1 to 5, where 1 represents 'Not important at all' and 5 represents 'Extremely important'. [Paper/Cardboard]","For the next question, please indicate how important you consider the recycling of each of the following materials to be.
+
+The scale goes from 1 to 5, where 1 represents 'Not important at all' and 5 represents 'Extremely important'. [Metal]","For the next question, please indicate how important you consider the recycling of each of the following materials to be.
+
+The scale goes from 1 to 5, where 1 represents 'Not important at all' and 5 represents 'Extremely important'. [Organic Waste]","For the next question, please indicate how important you consider the recycling of each of the following materials to be.
+
+The scale goes from 1 to 5, where 1 represents 'Not important at all' and 5 represents 'Extremely important'. [Electronic Waste]",Are you aware of the term critical raw material (CRM) and what it stands for?
+2025-05-17T17:46:57Z,5,Yes,Yes,4,4,5,26,Female,Universität/ETH - Master,Shared apartment (WG),Odd,Yes,4,4,5,4,5,4,4,5,3,5,3,4,NA
+2025-05-18T12:10:04Z,15,Yes,Yes,5,4,4,26,Male,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,5,5,5,5,5,5,5,3,4,4,3,5,Unsure
+2025-05-18T12:49:36Z,5,Don't know,Don't know,3,4,3,27,Female,Universität/ETH - Master,Shared apartment (WG),Odd,Yes,4,4,5,4,5,4,5,4,4,5,4,5,No
+2025-05-18T13:36:02Z,8,Yes,Don't know,5,4,4,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),Even,NA,5,4,5,5,5,2,5,4,2,5,2,5,No
+2025-05-18T14:00:06Z,5,Yes,Yes,5,4,5,25,Male,Universität/ETH - Master,Shared apartment (WG),Even,NA,5,5,5,5,5,5,5,5,5,5,5,5,Unsure
+2025-05-18T15:58:58Z,5,Yes,Yes,5,4,5,29,Male,Universität/ETH - Master,Couple household,Even,NA,5,5,5,4,5,5,5,5,4,5,4,5,Unsure
+2025-05-18T17:08:45Z,4,Yes,Yes,5,5,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,4,5,5,5,5,5,5,5,4,5,4,5,Unsure
+2025-05-18T20:11:22Z,10,Yes,No,5,5,5,27,Female,Universität/ETH - Bachelor,Couple household,Odd,Yes,5,4,5,5,5,4,5,5,5,5,4,5,Unsure
+2025-05-19T09:28:11Z,3,Yes,Yes,5,5,5,24,Female,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,4,5,5,4,5,4,5,5,5,5,5,5,Yes
+2025-05-19T10:43:06Z,2,Yes,Yes,4,5,4,24,Female,Universität/ETH - Bachelor,Shared apartment (WG),Even,NA,5,4,4,4,4,4,5,5,5,5,5,5,Yes
+2025-05-19T15:22:25Z,2,Yes,Yes,4,3,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,5,5,5,4,5,5,3,4,2,4,2,5,Unsure
+2025-05-19T15:40:18Z,3,Yes,Yes,5,5,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,4,4,5,3,5,4,4,3,2,5,3,5,Unsure
+2025-05-19T18:53:26Z,5,Yes,Yes,4,4,5,26,Female,Universität/ETH - Master,Shared apartment (WG),Odd,Yes,4,5,5,4,4,5,5,5,3,4,3,5,No
+2025-05-22T16:42:59Z,5,Yes,Yes,5,4,4,26,Male,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,4,4,5,4,5,4,4,5,4,5,4,5,No
+2025-05-23T00:58:38Z,4,No,NA,4,5,4,25,Male,Universität/ETH - Master,Shared apartment (WG),Odd,Yes,5,5,4,5,4,4,5,5,5,5,4,5,NA
+2025-05-23T01:32:10Z,15,Yes,Yes,4,3,4,26,Male,"Berufslehre (EFZ, EBA)",Family (parent),Odd,Yes,3,3,2,3,3,2,3,3,3,3,2,3,No
+2025-05-30T11:29:10Z,3,Yes,Yes,5,4,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,4,5,4,5,5,5,5,4,4,4,4,5,Yes
+2025-05-31T13:02:49Z,4,Yes,No,4,5,5,28,Female,Universität/ETH - Bachelor,Shared apartment (WG),Odd,Yes,4,5,5,4,4,4,5,5,4,4,3,5,No
+2025-06-01T17:31:44Z,15,Yes,Don't know,5,4,5,28,Male,Universität/ETH - Master,Shared apartment (WG),Even,NA,5,4,5,5,4,4,4,3,3,4,3,5,No
+2025-06-02T11:18:30Z,3,Yes,Yes,4,3,5,23,Male,Universität/ETH - Bachelor,Family (parent),Even,NA,3,5,5,4,4,5,5,4,5,5,5,5,No
+2025-06-01T17:31:49Z,15,Yes,Don't know,5,4,5,28,Male,Universität/ETH - Master,Shared apartment (WG),Even,NA,5,4,5,5,4,4,4,3,3,4,3,5,No

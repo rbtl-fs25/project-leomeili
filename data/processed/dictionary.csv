@@ -1,0 +1,27 @@
+variable_name,description
+date,date of the survey participation
+ewaste_amount,The amount of e-waste the participant guesses they have at home
+ewaste_disposal,Has the participant ever disposed of e-waste
+ewaste_recycling,Has the participant ever recycled e-waste
+crm_familiarity,Does the participant know the term critical raw material (CRM) and what it stands for
+even_odd,Is the birthday of the participant on an even or odd day -- randomize two groups
+article,Confirmation the participant opened and read the article provided
+co2_mining,How important a factor are co2 emissions from mining in the case for recycling e-waste (1-5)
+crm_recovery,How important a factor is the recovery of CRM in the case for recycling e-waste (1-5)
+unethical_mining,How important a factor is the reduced dependence on ethically controversial mining in the case for recycling e-waste (1-5)
+pollution,How important a factor is the abatement of pollution in the case for recycling e-waste (1-5)
+circecon_local,How important a factor are local supply chains/a circular economy in the case for recycling e-waste (1-5)
+crm_scarcity,How important a factor is avoiding CRM scarcity/reduced dependence on CRM imports in the case for recycling e-waste (1-5)
+pet,How important do you consider the recycling of PET to be?
+glass,How important do you consider the recycling of glass to be?
+paper_cardboard,How important do you consider the recycling of paper/cardboard to be?
+metal,How important do you consider the recycling of metal to be?
+organic_waste,How important do you consider the recycling of organic waste to be?
+electronic_waste,How important do you consider the recycling of electronic waste to be?
+personal_importance,How personally is e-waste recycling for the participant (1-5)
+systemic_importance,How systemically important does the participant consider e-waste recycling to be (1-5)
+likeliness_nextitem,How likely is the participant to recycle the next item of e-waste (1-5)
+age,Age of the participant
+gender,Gender of the participant
+degree,Highest degree of the participant
+household,The type of household the participant lives in

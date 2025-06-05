@@ -1,0 +1,21 @@
+id,date,ewaste_amount,ewaste_disposal,ewaste_recycling,crm_familiarity,even_odd,article,co2_mining,crm_recovery,unethical_mining,pollution,circecon_local,crm_scarcity,pet,glass,paper_cardboard,metal,organic_waste,electronic_waste,personal_importance,systemic_importance,likeliness_nextitem,age,gender,degree,household,average_items_ewaste
+1,2025-05-17,5,Yes,Yes,NA,Odd,Yes,4,4,5,4,5,4,4,5,3,5,3,4,4,4,5,26,Female,Universität/ETH - Master,Shared apartment (WG),6.05
+2,2025-05-18,15,Yes,Yes,Unsure,Odd,Yes,5,5,5,5,5,5,5,3,4,4,3,5,5,4,4,26,Male,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+3,2025-05-18,5,Don't know,Don't know,No,Odd,Yes,4,4,5,4,5,4,5,4,4,5,4,5,3,4,3,27,Female,Universität/ETH - Master,Shared apartment (WG),6.05
+4,2025-05-18,8,Yes,Don't know,No,Even,NA,5,4,5,5,5,2,5,4,2,5,2,5,5,4,4,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+5,2025-05-18,5,Yes,Yes,Unsure,Even,NA,5,5,5,5,5,5,5,5,5,5,5,5,5,4,5,25,Male,Universität/ETH - Master,Shared apartment (WG),6.05
+6,2025-05-18,5,Yes,Yes,Unsure,Even,NA,5,5,5,4,5,5,5,5,4,5,4,5,5,4,5,29,Male,Universität/ETH - Master,Couple household,6.05
+7,2025-05-18,4,Yes,Yes,Unsure,Odd,Yes,4,5,5,5,5,5,5,5,4,5,4,5,5,5,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+8,2025-05-18,10,Yes,No,Unsure,Odd,Yes,5,4,5,5,5,4,5,5,5,5,4,5,5,5,5,27,Female,Universität/ETH - Bachelor,Couple household,6.05
+9,2025-05-19,3,Yes,Yes,Yes,Odd,Yes,4,5,5,4,5,4,5,5,5,5,5,5,5,5,5,24,Female,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+10,2025-05-19,2,Yes,Yes,Yes,Even,NA,5,4,4,4,4,4,5,5,5,5,5,5,4,5,4,24,Female,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+11,2025-05-19,2,Yes,Yes,Unsure,Odd,Yes,5,5,5,4,5,5,3,4,2,4,2,5,4,3,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+12,2025-05-19,3,Yes,Yes,Unsure,Odd,Yes,4,4,5,3,5,4,4,3,2,5,3,5,5,5,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+13,2025-05-19,5,Yes,Yes,No,Odd,Yes,4,5,5,4,4,5,5,5,3,4,3,5,4,4,5,26,Female,Universität/ETH - Master,Shared apartment (WG),6.05
+14,2025-05-22,5,Yes,Yes,No,Odd,Yes,4,4,5,4,5,4,4,5,4,5,4,5,5,4,4,26,Male,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+15,2025-05-23,4,No,NA,NA,Odd,Yes,5,5,4,5,4,4,5,5,5,5,4,5,4,5,4,25,Male,Universität/ETH - Master,Shared apartment (WG),6.05
+16,2025-05-23,15,Yes,Yes,No,Odd,Yes,3,3,2,3,3,2,3,3,3,3,2,3,4,3,4,26,Male,"Berufslehre (EFZ, EBA)",Family (parent),6.05
+17,2025-05-30,3,Yes,Yes,Yes,Odd,Yes,4,5,4,5,5,5,5,4,4,4,4,5,5,4,5,25,Male,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+18,2025-05-31,4,Yes,No,No,Odd,Yes,4,5,5,4,4,4,5,5,4,4,3,5,4,5,5,28,Female,Universität/ETH - Bachelor,Shared apartment (WG),6.05
+19,2025-06-01,15,Yes,Don't know,No,Even,NA,5,4,5,5,4,4,4,3,3,4,3,5,5,4,5,28,Male,Universität/ETH - Master,Shared apartment (WG),6.05
+20,2025-06-02,3,Yes,Yes,No,Even,NA,3,5,5,4,4,5,5,4,5,5,5,5,4,3,5,23,Male,Universität/ETH - Bachelor,Family (parent),6.05

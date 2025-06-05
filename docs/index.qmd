@@ -1,0 +1,312 @@
+---
+title: "Electronic Waste Recycling Attitudes and Intentions among Swiss Households"
+subtitle: "Capstone Project"
+date: today
+author:
+  - name: "Leo Meili"
+    orcid: 0009-0005-8663-2627
+    email: lmeili@student.ethz.ch
+    affiliation: 
+      - name: ETH Zurich
+        url: https://ethz.ch/de.html
+abstract: This project is about the recycling attitudes of Swiss households and if targeted information on ethical controversies associated with critical raw material mining can improve said recycling intentions.
+license: "CC BY"
+citation: 
+  container-title: Research Beyond the Lab
+  url: https://rbtl-fs25.github.io/website/ # insert website link here
+bibliography: references.bib
+appendix: true
+#csl: apa.csl  # other csls https://github.com/citation-style-language/styles
+format:
+#  docx: default
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    reference-location: section
+    embed-resources: true
+    include-in-header:
+      text: |
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+              const refHeading = document.querySelector('section#references h1, section#references h2');
+              if (refHeading) {
+                const tocList = document.querySelector('.toc-active ul');
+                if (tocList) {
+                  const li = document.createElement('li');
+                  const a = document.createElement('a');
+                  a.href = "#references";
+                  a.innerText = "References";
+                  li.appendChild(a);
+                  tocList.appendChild(li);
+                }
+              }
+            }, 200); // small delay ensures ToC is ready
+          });
+        </script>
+        
+fig-width: 6
+execute:
+  warning: true
+  cache: false   # regularily clear out by knitr::clean_cache()
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+# Importing Libraries
+
+```{r}
+#| echo: true
+#| include: true
+suppressPackageStartupMessages({
+library(tidyverse)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(ggalt)
+library(ggthemes)
+library(patchwork)
+library(RColorBrewer)
+library(knitr)
+library(gt)
+library(here)})
+```
+
+# Introduction
+
+Electronic waste (e-waste) is a fast-growing solid waste stream [@liu2023global], with a large portion only being recycled informally. This is problematic for the recyclers and the environment due to its toxicity [@heacock2016ewaste; @perkins2014ewaste]. As the economic value can also still be high for e-waste, especially with the EU defining so-called critical raw materials (CRM) act [@european], its recycling can also be interesting from an economic and geopolitical viewpoint [@cucchiella2015recycling].
+
+# Methods
+
+To determine general attitudes of Swiss households on e-waste recycling, a survey asking participants to express their agreement with recycling-related statements based on the Likert Scale was created. This included factors contributing to the case for comprehensive e-waste recycling, personal recycling attitudes and intentions, and the rating of different materials recycling. All participants unaware of the term CRM were informed of its meaning. Additionally, a randomized group of the participants were shown an article highlighting some of the dire conditions associated with artisanal cobalt mining in the Democratic Republic of Congo (DRC), and Cobalt's use in electronics today [@ethical]. It was hypothesized that e-waste recycling intentions and attitudes of this group would be greater than that of the control group.
+
+# Results
+
+```{r}
+#| echo: true
+#| warning: false
+#| label: tbl-items-amount
+#| tbl-cap: Amount of electronic waste items the participants estimated to have at home
+
+amount_ewaste <- read_csv(here("data/final/ewaste_amount.csv"))
+
+amount_ewaste_table <- amount_ewaste |> 
+  gt() |> 
+  tab_header(title = "Amount of e-waste at home", subtitle = "With weighted average") |> 
+  fmt_number(columns = c(Average),
+             decimals = 2) |> 
+   tab_style(style = list(cell_text(weight = "bold"), 
+                          cell_fill(color = "#F0F0F0")),
+             locations = cells_body(rows = is.na(ewaste_amount) & is.na(n))) |> 
+    cols_align(align = "center",
+             columns = c(ewaste_amount, Average, n)) |> 
+  cols_label(ewaste_amount = "E-Waste Amount (items)",
+             n = "Count",
+             Average = "Weighted Average")
+
+amount_ewaste_table
+
+```
+
+As can be seen in @tbl-items-amount, all participants reported to have e-waste lying around at home, with an average of 6 items.
+
+The familiarity with the term critical raw material on the other hand was rather low (@fig-crm-familiarity), with only 16% having heard of it before taking the survey.
+
+```{r}
+#| fig-width: 6
+#| fig-height: 3
+#| echo: true
+#| warning: false
+#| label: fig-crm-familiarity
+#| fig-cap: Familiarity of all participants with the term critical raw material (CRM), before general info was made available to all, and specific info to a randomized group of the participants
+#| fig-align: center
+
+crm_familiar_data <- read_csv(here("data/final/CRMfamiliarity.csv"))
+
+ggplot(crm_familiar_data, aes(x = "", y = n, fill = crm_familiarity)) +
+  geom_col(width = 1) +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")),
+            position = position_stack(vjust = 0.5),
+            size = 4) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_void() +
+  labs(title = "Knowledge of the term critical raw material") + 
+  theme(legend.title = element_blank(), plot.title = element_text(hjust = 0.5))
+```
+
+After that, the survey split into the two groups, hereafter referred to as the control and the CRM group. The recycling intentions were found to be very similar for both groups, with no significant difference between the ones shown the additional info on CRM to the control group. In @fig-likert-recycling, the importance of certain factors in the case for recycling e-waste showed to be largely unaffected by what group the respondent was in. Overall, all provided factors were evaluated similarly to each other, namely as being very to extremely important. The control group often evaluated reasons to be more important for recycling e-waste than the CRM group. What's especially relevant is that they did that also for 'reducing dependence on ethically controversial mining', the main topic of the article shown to the CRM group.
+
+This allows thus for no statement on the effectiveness or influence of providing such additional information. It should be mentioned however that the control group consisted only of 2 participants (CRM group: 14 participants), so its statistical relevance is inexistent in any way. All provided factors were evaulated similarily to each other.
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4
+#| echo: true
+#| warning: false
+#| label: fig-likert-recycling
+#| fig-cap: Contribution of certain factors to the importance of e-waste recycling, i.e. how important a factor do you consider x to be in the case for recycling e-waste?
+#| fig-align: center
+
+likert_recycling <- read_rds(here("data/final/likert_recycling.rds"))
+likert_recycling_long <- read_rds(here("data/final/likert_recycling_long.rds"))
+
+ggplot() +
+  # Dumbbell layer: from wide-format
+  geom_dumbbell(data = likert_recycling,
+                aes(y = item, x = Control, xend = `CRM mining\ninfo provided`),
+                size = 4.5,
+                colour = "gray",
+                alpha = 0.8) +
+  
+  # Points layer: from long-format
+  geom_point(data = likert_recycling_long,
+             aes(x = mean_score, y = item, color = even_odd),
+             size = 6,
+             alpha = 0.6) +
+  
+  # Scale and labels
+  scale_x_continuous(breaks = 1:5, limits = c(1, 5),
+                     labels = c("(1) Not important at all", "2", "3", "4", "Extremely important (5)")) +
+  scale_color_manual(values = c(Control = "#0072B2", `CRM mining\ninfo provided` = "#D55E00")) +
+  labs(title = "Reasons for e-waste recycling",
+       x = NULL, y = NULL, color = "Group") +
+  theme_minimal() +
+  theme(legend.title = element_text(size = 11), legend.text = element_text(size = 10),
+        legend.key.size = unit(0.8, "lines"), axis.text.y = element_text(size = 10),
+        axis.text.x = element_text(size = 10), plot.title = element_text(size = 15, hjust = 0.5))
+
+```
+
+```{r}
+#| fig-width: 8
+#| fig-height: 2.5
+#| echo: true
+#| label: fig-likert-intentions
+#| fig-cap: E-waste recycling intentions and personal/systemic importance of e-waste recycling.
+#| fig-align: center
+
+likert_intentions <- read_rds(here("data/final/likert_intentions.rds"))
+likert_intentions_long <- read_rds(here("data/final/likert_intentions_long.rds"))
+
+ggplot() +
+  # Dumbbell layer: from wide-format
+  geom_dumbbell(data = likert_intentions,
+                aes(y = item, x = Control, xend = `CRM mining\ninfo provided`),
+                size = 4.5,
+                colour = "gray",
+                alpha = 0.8) +
+  
+  # Points layer: from long-format
+  geom_point(data = likert_intentions_long,
+             aes(x = mean_score, y = item, color = even_odd),
+             size = 6,
+             alpha = 0.6) +
+  
+  # Scale and labels
+  scale_x_continuous(breaks = 1:5, limits = c(1, 5),
+                     labels = c("(1) Not important at all\n/very unlikely", "2", "3", "4", "Extremely important/\nlikely (5)")) +
+  scale_color_manual(values = c(Control = "#0072B2", `CRM mining\ninfo provided` = "#D55E00")) +
+  labs(title = "E-waste recycling importance and intentions",
+       x = NULL, y = NULL, color = "Group") +
+  theme_minimal() +
+  theme(legend.title = element_text(size = 11), legend.text = element_text(size = 10),
+        legend.key.size = unit(0.8, "lines"), axis.text.y = element_text(size = 10),
+        axis.text.x = element_text(size = 10), plot.title = element_text(size = 15, hjust = 0.5))
+```
+
+As seen in @fig-likert-intentions and @fig-likert-materials, similar results were found for overall recycling importance, intentions and when comparing different materials' recycling. No trend indicating higher importance and intentions for the CRM groups are recognisable. If anything, it's worth mentioning that the control group deemed e-waste recycling more important than the CRM group, but did so with most types of material recycling, so this could also be attributed to overall higher motivation to recycle.\
+Nevertheless, recycling intentions are high - very high and personal importance is weighted a bit higher than systemic importance of recycling e-waste. The attitudes reflect that the need for recycling, especially e-waste, is widespread, with metal and PET being evaluated in a similar fashion, organic waste, paper, cardboard and glass slightly lower.
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4
+#| echo: true
+#| label: fig-likert-materials
+#| fig-cap: Subjective relevance of the recycling of selected materials of which recycling is readily available in CH.
+#| fig-align: center
+
+likert_materials <- read_rds(here("data/final/likert_materials.rds"))
+likert_materials_long <- read_rds(here("data/final/likert_materials_long.rds"))
+
+ggplot() +
+  # Dumbbell layer: from wide-format
+  geom_dumbbell(data = likert_materials,
+                aes(y = item, x = Control, xend = `CRM mining\ninfo provided`),
+                size = 4.5,
+                colour = "gray",
+                alpha = 0.8) +
+  
+  # Points layer: from long-format
+  geom_point(data = likert_materials_long,
+             aes(x = mean_score, y = item, color = even_odd),
+             size = 6,
+             alpha = 0.6) +
+  
+  # Scale and labels
+  scale_x_continuous(breaks = 1:5, limits = c(1, 5),
+                     labels = c("(1) Not important at all", "2", "3", "4", "Extremely important (5)")) +
+  scale_color_manual(values = c(Control = "#0072B2", `CRM mining\ninfo provided` = "#D55E00")) +
+  labs(title = "Importance of selected materials recycling",
+       subtitle = "How important do participants consider the recycling of the following materials to be?",
+       x = NULL, y = NULL, color = "Group") +
+  theme_minimal() +
+  theme(legend.title = element_text(size = 11), legend.text = element_text(size = 10),
+        legend.key.size = unit(0.8, "lines"), axis.text.y = element_text(size = 10),
+        axis.text.x = element_text(size = 10), plot.title = element_text(size = 15, hjust = 0.5))
+```
+
+A visualization of the demographics of the survey's participants can be seen in the Appendix, @fig-demographics.
+
+# Conclusion
+
+-   Recycling intentions and attitudes towards e-waste are very high among the survey's respondents, mainly young, highly educated people living in shared apartments.
+
+-   Including targeted information on CRM and its ethically controversial sourcing in countries like the DRC did not show any significant effect on e-waste recycling intentions and attitudes.
+
+-   This is mainly attributed to the statistically insignificant amount of responses of either group and the high education level of participants.
+
+# Appendix
+
+## Additional Figures
+
+```{r}
+#| fig-width: 9
+#| echo: true
+#| warning: false
+#| label: fig-demographics
+#| fig-cap: Demographic info on the participants
+#| fig-align: center
+
+household_data <- read_csv(here("data/final/household.csv"), show_col_types = FALSE)
+education_data <- read_csv(here("data/final/education.csv"), show_col_types = FALSE)
+
+plot1 <- ggplot(education_data, aes(x = "", y = n, fill = degree)) +
+  geom_col(width = 1) +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = paste0(percentage, "%")),
+            position = position_stack(vjust = 0.5),
+            size = 4) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_void() +
+  labs(title = "Highest completed degree of participants") + 
+  theme(legend.title = element_blank())
+
+plot2 <- ggplot(household_data, aes(x = "", y = n, fill = household)) +
+  geom_col(width = 1) +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = paste0(percentage, "%")),
+            position = position_stack(vjust = 0.5),
+            size = 4) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_void() +
+  labs(title = "Household type of participants") + 
+  theme(legend.title = element_blank(), plot.title = element_text(hjust = 0.5))
+
+plot1 + plot2
+```
+
+# References
