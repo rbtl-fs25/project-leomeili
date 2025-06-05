@@ -169,6 +169,7 @@ crm_familiar_data <- data_clean2 |>
 write_csv(crm_familiar_data, "data/final/CRMfamiliarity.csv")
 
 
+#creating the dataset for the e-waste amount table
 amount_ewaste <- data_clean2 |> 
   select(ewaste_amount) |> 
   count(ewaste_amount)
@@ -179,6 +180,5 @@ avg_row <- data.frame(ewaste_amount = NA,
                       n = NA,
                       Average = avg_value)
 final_amount_ewaste <- bind_rows(amount_ewaste, avg_row)
-
 
 write_csv(final_amount_ewaste, "data/final/ewaste_amount.csv")
