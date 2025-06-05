@@ -56,7 +56,7 @@ library(here)})
 
 # Introduction
 
-Electronic waste (e-waste) is a fast-growing solid waste stream [@liu2023global], with a large portion only being recycled informally. This is problematic for the recyclers and the environment due to its toxicity [@heacock2016ewaste; @perkins2014ewaste]. As the economic value can also still be high for e-waste, its recycling can also be interesting from an economic and geopolitical viewpoint [@cucchiella2015recycling]. This is highlighted with the EU defining the so-called critical raw materials (CRM) act [@european].
+Electronic waste (e-waste) is a fast-growing solid waste stream with a large portion only being recycled informally[@liu2023global]. This is problematic for the recyclers and the environment due to its toxicity [@heacock2016ewaste; @perkins2014ewaste]. As the economic value can also still be high for e-waste, its recycling can also be interesting from an economic and geopolitical viewpoint [@cucchiella2015recycling]. This is highlighted with the EU defining the so-called critical raw materials (CRM) act [@european].
 
 # Methods
 
