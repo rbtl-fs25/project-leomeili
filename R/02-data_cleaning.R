@@ -58,7 +58,6 @@ likert_materials <- c("pet", "glass", "paper_cardboard",
                       "metal", "organic_waste", "electronic_waste")
 #these are the three groups of categories that will receive a figure each
 
-
 #selecting the data for recycling motivation
 data_likert_recycling <- data_clean2 |> 
   select(!likert_intentions & !likert_materials)

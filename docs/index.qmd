@@ -9,7 +9,7 @@ author:
     affiliation: 
       - name: ETH Zurich
         url: https://ethz.ch/de.html
-abstract: In this project, the recycling attitudes of Swiss households are evaluated. It is further examined if targeted information on ethical controversies associated with critical raw material mining can improve said recycling intentions. 
+abstract: In this project, the recycling attitudes of Swiss households are evaluated. It is further examined if targeted information on ethical controversies associated with critical raw material mining can influence said recycling intentions. 
 license: "CC BY"
 citation: 
   container-title: Research Beyond the Lab
